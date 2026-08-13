@@ -26,7 +26,9 @@ Autoregressive language model over soprano pitch sequences: `p(x_1, ..., x_N) = 
 Seq2Seq problem: given a soprano melody (pitch-class sequence), predict the chord root at each
 beat: `p(chord | melody)`.
 
-![Melody-chord co-occurrence](task2_melody_chord_cooccurrence.png)
+<p align="center">
+  <img src="task2_melody_chord_cooccurrence.png" alt="Melody-chord co-occurrence" width="60%">
+</p>
 
 - **Model**: Encoder-Decoder GRU — encoder reads the full melody, decoder generates chord roots
   beat-by-beat using scheduled/teacher-forced decoding (teacher-forcing ratio decayed over
@@ -37,7 +39,9 @@ beat: `p(chord | melody)`.
   (PPL 5.94) on both metrics.
 - Harmonized output is rendered as a 4-voice MIDI file (soprano melody + predicted chords).
 
-![Task 2 harmonization perplexity vs. baselines](task2_eval.png)
+<p align="center">
+  <img src="task2_eval.png" alt="Task 2 harmonization perplexity vs. baselines" width="60%">
+</p>
 
 ## Limitations
 
